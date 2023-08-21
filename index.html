@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Akan name generator</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <h1>My Akan name generator</h1>
+        <p>This is an application that collects your birthdate information, calculates the weekday on which you were born, and then generates your Akan Name based on your gender.
+        Akan names originate from Ghanaian culture. It is common practice in Ghana for children to receive a first name known as a 'day name,' which corresponds to the day of the week they were born.</p>
+        <p>To discover your Akan name, simply complete the form below and click the 'Generate Name' button.</p>
+
+        <form class="myform" onsubmit="return getAkanName()">
+          <label for="year-of-birth">
+            Year:
+            <input id="year-input" type="number" name="year-of-birth" placeholder="YYYY" value="" required>
+          </label>
+          <label for="month-of-birth">
+            Month:
+            <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required>
+          </label>
+          <label for="day-of-birth">
+            Date:
+            <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required>
+          </label>
+          <br>
+          <label for="gender">
+            <p>Select your gender: </p>
+            Female
+            <input id="female-input" type="radio" name="gender" value="female" required>
+            Male
+            <input id="male-input" type="radio" name="gender" value="male" required>
+            
+          </label>
+          <br><br>
+          <input id="get-name" type="submit" name="" value="Generate name">
+          <br><br>
+        </form>
+        <form onsubmit="return clearInput()">
+          <input class="clear" type="submit" value="Clear input">
+        </form>
+
+        <h4 id = display-name><strong>Here is your Akan name:</strong></h4>
+        <p id="result"></p>
+      </div>
+    </div>
+
+    <script src="myScript.js" ></script>
+
+  </body>
+</html>
